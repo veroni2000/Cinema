@@ -12,6 +12,7 @@ public class CinemaApplication {
 		/// i need help
 		int a;
 		int b;
+		int ccc;
 	}
 
 }
