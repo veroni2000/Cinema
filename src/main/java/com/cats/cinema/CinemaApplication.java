@@ -7,7 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CinemaApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(CinemaApplication.class, args);
+		/// i need help
+		int a;
+		int b;
 	}
 
 }
