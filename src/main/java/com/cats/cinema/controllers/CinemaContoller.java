@@ -45,11 +45,11 @@ public class CinemaContoller {
         Users user = new Users(id,email,password,name,role);
         user = usersRepository.save(user);
         Map<String, Object> response = new HashMap<>();
-        response.put("Id: ", user.getUser_id());
+        response.put("Id", user.getUser_id());
         if(isNew) {
-            response.put("message", "Успешно записан! ");
+            response.put("message", "Успешно записан!");
         }else{
-            response.put("message", "Успешно редактиран! ");
+            response.put("message", "Успешно редактиран!");
         }
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
