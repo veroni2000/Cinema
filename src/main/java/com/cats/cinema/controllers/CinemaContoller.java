@@ -35,16 +35,22 @@ public class CinemaContoller {
     }
 
     @PostMapping("/save")
-    public ResponseEntity<?> saveOrUpdate(@RequestParam(required = false) String name,
+    public ResponseEntity<?> saveOrUpdate(@RequestParam(required = false) Long id,
+                                          @RequestParam(required = false) String name,
                                           @RequestParam(required = false) String email,
                                           @RequestParam(required = false) String password,
                                           @RequestParam(required = false)String role){
-        Users user = new Users(email,password,name,role);
+        boolean isNew = id ==null;
+
+        Users user = new Users(id,email,password,name,role);
         user = usersRepository.save(user);
         Map<String, Object> response = new HashMap<>();
-        response.put("geneartedId", user.getUser_id());
-        response.put("message","Успешно записан! ");
-
+        response.put("Id: ", user.getUser_id());
+        if(isNew) {
+            response.put("message", "Успешно записан! ");
+        }else{
+            response.put("message", "Успешно редактиран! ");
+        }
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
