@@ -60,12 +60,11 @@ public class CinemaContoller {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-    /*DeleteMapping("/delete")
-        public ResponseEntity<?> deleteUser(@RequestParam String name,
-                                            @RequestParam Long id){
-        //...
+    @DeleteMapping("/users/delete")
+        public ResponseEntity<?> deleteUser(@RequestParam Long id){
+            usersRepository.findByID(id).ifPresent(test -> usersRepository.delete(test));
             return ResponseEntity.ok("Успешно изтрит потребител! ");
-        }*/
+        }
 
     @Autowired
     MoviesRepository moviesRepositiry;
