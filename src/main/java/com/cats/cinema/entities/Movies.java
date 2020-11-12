@@ -19,7 +19,7 @@ public class Movies {
     public Movies() {
     }
 
-    public Movies(String tittle, Date date) {
+    public Movies(Long id, String tittle, Date date) {
         this.tittle = tittle;
         this.date = date;
     }

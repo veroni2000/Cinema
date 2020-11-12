@@ -12,9 +12,9 @@ public class Screenings {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long screening_id;
 
-
-    @Column(name = "movie_id")
-    private Long movie_id;
+    @ManyToOne()
+    @JoinColumn(name = "movie_id")
+    private Movies movie;
 
     @Column(name = "seats")
     private int seats;
@@ -38,12 +38,13 @@ public class Screenings {
         this.screening_id = screening_id;
     }
 
-    public Long getMovie_id() {
-        return movie_id;
+    //
+    public Movies getMovie() {
+        return movie;
     }
 
-    public void setMovie_id(Long movie_id) {
-        this.movie_id = movie_id;
+    public void setMovie(Movies movie) {
+        this.movie = movie;
     }
 
     public int getSeats() {
