@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Cinema.iml" filepath="$PROJECT_DIR$/Cinema.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Cinema-backend/Cinema-backend.iml" filepath="$PROJECT_DIR$/Cinema-backend/Cinema-backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cinema-ui/cinema-ui.iml" filepath="$PROJECT_DIR$/cinema-ui/cinema-ui.iml" />
+    </modules>
+  </component>
+</project>
