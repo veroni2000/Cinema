@@ -1,28 +1,27 @@
 <template>
   <div>
-    <header class="jumbotron">
-      <h1>{{content}}</h1>
+    <header>
+      <h3>{{content}}</h3>
     </header>
   </div>
 </template>
 
 <script>
-import UsersSecvice from "../services/users-service"
-
+import UsersService from '../services/users-service'
 export default {
-  name: 'Users',
-  data() {
-    return{
+  name: 'Users.vue',
+  data () {
+    return {
       content: ''
     }
   },
-  mounted() {
-    UsersSecvice.getAllUsers().then(
+  mounted () {
+    UsersService.getAllUsers().then(
       response => {
         this.content = response.data
       },
       error => {
-        this.content =
+        this.users =
           (error.response && error.response.data) ||
           error.message ||
           error.toString()
