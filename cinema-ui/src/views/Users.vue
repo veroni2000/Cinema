@@ -1,7 +1,18 @@
 <template>
   <div>
     <header>
-      <h3>{{content}}</h3>
+      <b-table
+        striped
+        hover
+        :items="users"
+        :fields="fields"
+      >
+        <template slot="top-row" slot-scope="{fields}">
+          <td v-for="field in fields" :key="field.id">
+            <input>
+          </td>
+        </template>
+      </b-table>
     </header>
   </div>
 </template>
@@ -9,10 +20,18 @@
 <script>
 import UsersService from '../services/users-service'
 export default {
-  name: 'Users.vue',
+  name: 'Users',
   data () {
     return {
-      content: ''
+      users: [{
+        id: '',
+        name: '',
+        email: ''
+      }],
+      fields: [
+        {key: 'name', label: 'Име'},
+        {key: 'email', label: 'Имейл'}
+      ]
     }
   },
   mounted () {
