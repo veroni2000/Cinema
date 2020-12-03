@@ -1,9 +1,3 @@
-const router = new VueRouter({
-  routes
-})
-
-export default router
-
 import axios from 'axios'
 
 const API_URL = 'http://localhost:8080/users'
@@ -13,4 +7,5 @@ class UsersService {
     return axios.get(API_URL + '/all')
   }
 }
+
 export default new UsersService()
