@@ -29,8 +29,8 @@ export default {
         email: ''
       }],
       fields: [
-        { key: 'name', label: 'Име' },
-        { key: 'email', label: 'Имейл' }
+        {key: 'name', label: 'Име'},
+        {key: 'email', label: 'Имейл'}
       ]
     }
   },
