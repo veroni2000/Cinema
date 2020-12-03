@@ -1,7 +1,6 @@
 package com.cats.cinema.entities;
 
 import javax.persistence.*;
-import java.sql.Time;
 import java.sql.Timestamp;
 
 @Entity

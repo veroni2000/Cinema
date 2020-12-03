@@ -4,8 +4,6 @@ import com.cats.cinema.entities.Movies;
 import com.cats.cinema.entities.Users;
 import com.cats.cinema.repositories.UsersRepository;
 import com.cats.cinema.repositories.MoviesRepository;
-import com.cats.cinema.repositories.TicketsRepository;
-import com.cats.cinema.repositories.ScreeningsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.sql.Date;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("cinema")
 public class CinemaContoller {
