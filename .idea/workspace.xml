@@ -23,9 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd1a14a3-41ae-4bab-8438-b13337fcaa05" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/entities/Roles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/repositories/RolesRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-ui/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-ui/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/controllers/CinemaContoller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/controllers/CinemaContoller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/entities/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/entities/Users.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +38,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -113,7 +117,7 @@
       <workItem from="1607023490447" duration="331000" />
       <workItem from="1607024584201" duration="1450000" />
       <workItem from="1607105325740" duration="1224000" />
-      <workItem from="1607193901258" duration="1339000" />
+      <workItem from="1607193901258" duration="3496000" />
     </task>
     <servers />
   </component>

@@ -2,8 +2,10 @@ package com.cats.cinema.controllers;
 
 import com.cats.cinema.entities.Movies;
 import com.cats.cinema.entities.Users;
+import com.cats.cinema.entities.Roles;
 import com.cats.cinema.repositories.UsersRepository;
 import com.cats.cinema.repositories.MoviesRepository;
+import com.cats.cinema.repositories.RolesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -44,10 +46,10 @@ public class CinemaContoller {
                                           @RequestParam(required = false) String name,
                                           @RequestParam(required = false) String email,
                                           @RequestParam(required = false) String password,
-                                          @RequestParam(required = false) String role){
+                                          @RequestParam(required = false) Roles role_id){
         boolean isNew = id == null;
 
-        Users user = new Users(id,email,password,name,role);
+        Users user = new Users(id,email,password,name,role_id);
         user = usersRepository.save(user);
         Map<String, Object> response = new HashMap<>();
         response.put("Id", user.getUser_id());
