@@ -5,7 +5,7 @@ import store from './store'
 import * as axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import { BTable } from 'bootstrap-vue'
+import { BTable, BPagination } from 'bootstrap-vue'
 
 Vue.component('b-table', BTable)
 Vue.prototype.$axios = axios
