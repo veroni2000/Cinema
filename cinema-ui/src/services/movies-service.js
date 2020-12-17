@@ -1,14 +1,14 @@
 import axios from 'axios'
 
-const API_URL = 'http://localhost:8080/cinema'
+const API_URL = 'http://localhost:8080/cinema/movies'
 
 class MoviesService {
   getAllMovies () {
-    return axios.get(API_URL + 'movies/all')
+    return axios.get(API_URL + '/all')
   }
 
   getMoviesPage (currentPage, perPage, filters) {
-    return axios.get(API_URL + 'movies/search/page',
+    return axios.get(API_URL + '/search/page',
       {
         params:
           {

@@ -16,7 +16,7 @@
             <input v-model="filters[field.key]">
           </td>
         </template>
-        <template v-slot:cell(name)="data">
+        <template v-slot:cell(title)="data">
           <div v-if="data.item.title">
             {{data.item.title}}
           </div>
@@ -66,7 +66,7 @@ export default {
     searchMovies () {
       MoviesService.getMoviesPage(this.currentPage, this.perPage, this.filters).then(
         response => {
-          this.movies = response.data.title
+          this.movies = response.data.movies
           this.rows = response.data.totalItems
         },
         error => {
