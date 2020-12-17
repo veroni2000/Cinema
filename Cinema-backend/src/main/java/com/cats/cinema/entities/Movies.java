@@ -11,7 +11,7 @@ public class Movies {
     private Long movie_id;
 
     @Column(name = "title")
-    private String tittle;
+    private String title;
 
     @Column(name = "date")
     private Date date;
@@ -19,8 +19,8 @@ public class Movies {
     public Movies() {
     }
 
-    public Movies(Long id, String tittle, Date date) {
-        this.tittle = tittle;
+    public Movies(Long id, String title, Date date) {
+        this.title = title;
         this.date = date;
     }
 
@@ -32,12 +32,12 @@ public class Movies {
         this.movie_id = movie_id;
     }
 
-    public String getTittle() {
-        return tittle;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTittle(String tittle) {
-        this.tittle = tittle;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public Date getDate() {
