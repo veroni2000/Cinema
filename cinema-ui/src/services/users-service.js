@@ -1,19 +1,20 @@
 import axios from 'axios'
 
-const API_URL = 'http://localhost:8080/users'
+const API_URL = 'http://localhost:8080/'
 
 class UsersService {
   getAllUsers () {
-    return axios.get(API_URL + '/all')
+    return axios.get(API_URL + 'cinema/users/all')
   }
-  getUsersPage(filters, currentPage, perPage){
-    return axios.get(API_URL + '/search/page',
+
+  getUsersPage (currentPage, perPage, filters) {
+    return axios.get(API_URL + 'users/search/page',
       {
         params:
           {
-            name: filters.name,
             currentPage: currentPage,
-            perPage: perPage
+            perPage: perPage,
+            name: filters.name
           }
       }
     )
