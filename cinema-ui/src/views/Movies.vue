@@ -18,7 +18,9 @@
         </template>
         <template v-slot:cell(title)="data">
           <div v-if="data.item.title">
+            <router-link :to="{name: 'MovieTab', params:{ id: data.item.id } }">
             {{data.item.title}}
+            </router-link>
           </div>
           <div v-else>
             Няма такъв филм

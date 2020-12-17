@@ -28,15 +28,6 @@ class UsersService {
           }
       })
   }
-  getUserById(id){
-    return axios.get(API_URL + '/search/id',
-      {
-        params:
-          {
-            id: id
-          }
-      })
-  }
   deleteUserById(id){
     return axios.delete(API_URL + '/delete',
       {

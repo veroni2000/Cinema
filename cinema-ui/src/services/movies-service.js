@@ -11,11 +11,22 @@ class MoviesService {
     return axios.get(API_URL + '/search/page',
       {
         params:
-          {
-            currentPage: currentPage,
-            perPage: perPage,
-            title: filters.title
-          }
+        {
+          currentPage: currentPage,
+          perPage: perPage,
+          title: filters.title
+        }
+      }
+    )
+  }
+
+  getMovieById (id) {
+    return axios.get(API_URL + '/search/id',
+      {
+        params:
+        {
+          id: id
+        }
       }
     )
   }
