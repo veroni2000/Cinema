@@ -76,9 +76,9 @@ public class UsersController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-    @DeleteMapping("/users/delete")
+    @DeleteMapping("/delete")
     public ResponseEntity<?> deleteUser(@RequestParam Long id){
-        usersRepository.findByID(id).ifPresent(test -> usersRepository.delete(test));
+        usersRepository.deleteById(id);
         return ResponseEntity.ok("Успешно изтрит потребител! ");
     }
 }
