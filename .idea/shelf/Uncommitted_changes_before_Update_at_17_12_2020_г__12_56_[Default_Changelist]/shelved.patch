@@ -1,0 +1,138 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"BranchesTreeState\">\r\n    <expand>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </expand>\r\n    <select />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"fd1a14a3-41ae-4bab-8438-b13337fcaa05\" name=\"Default Changelist\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/entities/Roles.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/repositories/RolesRepository.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/controllers/CinemaContoller.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/controllers/CinemaContoller.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/entities/Users.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/entities/Users.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"JavaScript File\" />\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1kVNwQUPfiZhaDNIAIUTxfb3jPh\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"ExpandSpringBootJavaOptionsPanel\" value=\"true\" />\r\n    <property name=\"ExpandSpringBootSpringBootSettingsPanel\" value=\"false\" />\r\n    <property name=\"RequestMappingsPanelOrder0\" value=\"0\" />\r\n    <property name=\"RequestMappingsPanelOrder1\" value=\"1\" />\r\n    <property name=\"RequestMappingsPanelWidth0\" value=\"75\" />\r\n    <property name=\"RequestMappingsPanelWidth1\" value=\"75\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"aspect.path.notification.shown\" value=\"true\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\r\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\r\n    <property name=\"project.structure.last.edited\" value=\"Modules\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.2\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.pluginManager\" />\r\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CreateClassDialog.RecentsKey\">\r\n      <recent name=\"com.cats.cinema\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"ArquillianJUnit\" factoryName=\"\" nameIsGenerated=\"true\">\r\n      <option name=\"arquillianRunConfiguration\">\r\n        <value>\r\n          <option name=\"containerStateName\" value=\"\" />\r\n        </value>\r\n      </option>\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"CinemaApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\">\r\n      <module name=\"Cinema-backend\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"com.cats.cinema.CinemaApplication\" />\r\n      <option name=\"ALTERNATIVE_JRE_PATH\" value=\"11\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"fd1a14a3-41ae-4bab-8438-b13337fcaa05\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1605782050176</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1605782050176</updated>\r\n      <workItem from=\"1605782055264\" duration=\"2000\" />\r\n      <workItem from=\"1605784715467\" duration=\"1711000\" />\r\n      <workItem from=\"1606383195773\" duration=\"6114000\" />\r\n      <workItem from=\"1606729271076\" duration=\"4599000\" />\r\n      <workItem from=\"1606759671760\" duration=\"337000\" />\r\n      <workItem from=\"1606994471137\" duration=\"269000\" />\r\n      <workItem from=\"1606994944555\" duration=\"712000\" />\r\n      <workItem from=\"1607020678277\" duration=\"14000\" />\r\n      <workItem from=\"1607020714568\" duration=\"1704000\" />\r\n      <workItem from=\"1607023490447\" duration=\"331000\" />\r\n      <workItem from=\"1607024584201\" duration=\"1450000\" />\r\n      <workItem from=\"1607105325740\" duration=\"1224000\" />\r\n      <workItem from=\"1607193901258\" duration=\"3496000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision ac991e365e5861c07a32d64b0a7556b8f6638124)
++++ b/.idea/workspace.xml	(date 1608202588009)
+@@ -3,31 +3,9 @@
+   <component name="AutoImportSettings">
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+-  <component name="BranchesTreeState">
+-    <expand>
+-      <path>
+-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+-      </path>
+-      <path>
+-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+-      </path>
+-      <path>
+-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+-      </path>
+-    </expand>
+-    <select />
+-  </component>
+   <component name="ChangeListManager">
+     <list default="true" id="fd1a14a3-41ae-4bab-8438-b13337fcaa05" name="Default Changelist" comment="">
+-      <change afterPath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/entities/Roles.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/repositories/RolesRepository.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/controllers/CinemaContoller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/controllers/CinemaContoller.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/entities/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/entities/Users.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -38,8 +16,6 @@
+     <option name="RECENT_TEMPLATES">
+       <list>
+         <option value="JavaScript File" />
+-        <option value="Interface" />
+-        <option value="Class" />
+       </list>
+     </option>
+   </component>
+@@ -52,38 +28,28 @@
+     <option name="showLibraryContents" value="true" />
+   </component>
+   <component name="PropertiesComponent">
+-    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+-    <property name="ExpandSpringBootSpringBootSettingsPanel" value="false" />
+     <property name="RequestMappingsPanelOrder0" value="0" />
+     <property name="RequestMappingsPanelOrder1" value="1" />
+     <property name="RequestMappingsPanelWidth0" value="75" />
+     <property name="RequestMappingsPanelWidth1" value="75" />
+     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+     <property name="WebServerToolWindowFactoryState" value="false" />
+     <property name="aspect.path.notification.shown" value="true" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+     <property name="nodejs_package_manager_path" value="npm" />
+-    <property name="project.structure.last.edited" value="Modules" />
+-    <property name="project.structure.proportion" value="0.15" />
+-    <property name="project.structure.side.proportion" value="0.2" />
+-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
++    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+     <property name="vue.rearranger.settings.migration" value="true" />
+   </component>
+-  <component name="RecentsManager">
+-    <key name="CreateClassDialog.RecentsKey">
+-      <recent name="com.cats.cinema" />
+-    </key>
+-  </component>
+   <component name="RunManager">
+-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
++    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+       <option name="arquillianRunConfiguration">
+         <value>
+           <option name="containerStateName" value="" />
+         </value>
+       </option>
+-      <option name="TEST_OBJECT" value="class" />
++      <option name="TEST_OBJECT" value="CLASS" />
++      <properties />
++      <listeners />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+@@ -91,7 +57,6 @@
+     <configuration name="CinemaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+       <module name="Cinema-backend" />
+       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cats.cinema.CinemaApplication" />
+-      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+@@ -112,12 +77,8 @@
+       <workItem from="1606759671760" duration="337000" />
+       <workItem from="1606994471137" duration="269000" />
+       <workItem from="1606994944555" duration="712000" />
+-      <workItem from="1607020678277" duration="14000" />
+-      <workItem from="1607020714568" duration="1704000" />
+-      <workItem from="1607023490447" duration="331000" />
+-      <workItem from="1607024584201" duration="1450000" />
+-      <workItem from="1607105325740" duration="1224000" />
+-      <workItem from="1607193901258" duration="3496000" />
++      <workItem from="1607195512276" duration="2637000" />
++      <workItem from="1607357690091" duration="69000" />
+     </task>
+     <servers />
+   </component>
+@@ -125,15 +86,9 @@
+     <option name="version" value="3" />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+-    <option name="TAB_STATES">
+-      <map>
+-        <entry key="MAIN">
+-          <value>
+-            <State />
+-          </value>
+-        </entry>
+-      </map>
+-    </option>
+     <option name="oldMeFiltersMigrated" value="true" />
+   </component>
++  <component name="com.intellij.coverage.CoverageDataManagerImpl">
++    <SUITE FILE_PATH="coverage/cinema$CinemaApplication.ic" NAME="CinemaApplication Coverage Results" MODIFIED="1604312291314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
++  </component>
+ </project>
+\ No newline at end of file

@@ -1,14 +1,20 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/movies">Movies</router-link>
+      <div>
+        <b-navbar type="light" variant="light">
+          <b-navbar-nav>
+            <router-link class="mr-sm-2" to="/">Home</router-link>
+            <router-link class="mr-sm-2" to="/about">About</router-link>
+            <router-link class="mr-sm-2" to="/movies">Movies</router-link>
+          </b-navbar-nav>
+        </b-navbar>
+      </div>
+
     </div>
     <router-view/>
   </div>
 </template>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -28,6 +34,6 @@
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #85bb65;
 }
 </style>
