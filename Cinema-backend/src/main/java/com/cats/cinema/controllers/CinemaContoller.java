@@ -69,6 +69,7 @@ public class CinemaContoller {
             return ResponseEntity.ok("Успешно изтрит потребител! ");
         }
 
+<<<<<<< HEAD
     @Autowired
     MoviesRepository moviesRepository;
 
@@ -111,13 +112,7 @@ public class CinemaContoller {
                                           @RequestParam String title){
         Pageable pageable = PageRequest.of(currentPage -1, perPage);
         Page<Movies> movies = moviesRepository.findPageMovies(pageable, title.toLowerCase());
+=======
+>>>>>>> 105b182fa9649918601d5ad1d10c3dab9e282fae
 
-        Map<String, Object> response = new HashMap<>();
-        response.put("movies", movies.getContent());
-        response.put("currentPage", movies.getNumber());
-        response.put("totalItems", movies.getTotalElements());
-        response.put("totalPages", movies.getTotalPages());
-
-        return new ResponseEntity<>(response,HttpStatus.OK);
-    }
 }
