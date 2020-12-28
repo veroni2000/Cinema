@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{movie}}
+    {{Movie}}
   </div>
 </template>
 
@@ -10,7 +10,7 @@ export default {
   name: 'MovieTab',
   data () {
     return {
-      movie: {
+      Movie: {
         id: '',
         title: '',
         data: '',
@@ -26,10 +26,11 @@ export default {
         )
       }
     )
+    console.log(to.params.id)
   },
   methods: {
     setData (response) {
-      this.movie = response.data
+      this.Movie = response.data
     }
   }
 }

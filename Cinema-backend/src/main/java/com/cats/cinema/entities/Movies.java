@@ -16,12 +16,16 @@ public class Movies {
     @Column(name = "date")
     private Date date;
 
+    @Column(name = "description")
+    private String description;
+
     public Movies() {
     }
 
-    public Movies(Long id, String title, Date date) {
+    public Movies(Long id, String title, Date date, String description) {
         this.title = title;
         this.date = date;
+        this.description = description;
     }
 
     public Long getMovie_id() {
@@ -46,5 +50,13 @@ public class Movies {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

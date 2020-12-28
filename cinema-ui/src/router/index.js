@@ -26,7 +26,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/movieTab/',
+    path: '/movieTab/:id',
     name: 'MovieTab',
     component: MovieTab,
     props: true

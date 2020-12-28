@@ -71,19 +71,20 @@ public class CinemaContoller {
 
     @Autowired
     MoviesRepository moviesRepository;
+
     @GetMapping("/movies/all")
     public List<Movies> getMovies()
     {
-
         return  moviesRepository.findAll();
     }
     @PostMapping("/movies/save")
     public ResponseEntity<?> saveOrUpdate(@RequestParam(required = false) Long id,
                                           @RequestParam(required = false) String title,
-                                          @RequestParam(required = false) Date date){
+                                          @RequestParam(required = false) Date date,
+                                          @RequestParam(required = false) String description){
         boolean isNew = id == null;
 
-        Movies movie = new Movies(id,title,date);
+        Movies movie = new Movies(id,title,date,description);
         movie = moviesRepository.save(movie);
         Map<String, Object> response = new HashMap<>();
         response.put("Id", movie.getMovie_id());
@@ -94,8 +95,8 @@ public class CinemaContoller {
         }
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
-    @GetMapping("movies/search/id")
-    public ResponseEntity<?> getMovieById(@RequestParam(required = false) Long id){
+    @GetMapping("/movies/search/id")
+    public ResponseEntity<?> getMovieById(@RequestParam(required = true) Long id){
         Movies movie = null;
         try{
             movie= moviesRepository.findById(id).get();
@@ -104,7 +105,7 @@ public class CinemaContoller {
         }
         return new ResponseEntity<>(movie, HttpStatus.OK);
     }
-    @GetMapping("movies/search/page")
+    @GetMapping("/movies/search/page")
     public ResponseEntity<?>paginateMovies(@RequestParam(value = "currentPage",defaultValue = "1")int currentPage,
                                           @RequestParam(value = "perPage",defaultValue = "5")int perPage,
                                           @RequestParam String title){

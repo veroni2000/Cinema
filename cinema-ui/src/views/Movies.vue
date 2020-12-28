@@ -7,7 +7,7 @@
         hover
         :items="movies"
         :fields="fields"
-        :current-page="currentPage"
+        :current-page=1
         :per-page="0"
       >
 
@@ -18,7 +18,7 @@
         </template>
         <template v-slot:cell(title)="data">
           <div v-if="data.item.title">
-            <router-link :to="{name: 'MovieTab', params:{ id: data.item.id } }">
+            <router-link :to="{name: 'MovieTab', params:{ id: data.item.id} }">
             {{data.item.title}}
             </router-link>
           </div>
