@@ -13,6 +13,7 @@
               <b-form-input class="form-control mr-sm-2" type="search" placeholder="Search"></b-form-input>
               <b-button v-on:click = "searchMovies">Търси</b-button>
             </form>
+            <h1>GEEEEEEyyy</h1>
           </b-navbar-nav>
         </b-navbar>
       </div>
