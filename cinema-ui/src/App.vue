@@ -10,7 +10,6 @@
           </b-navbar-nav>
         </b-navbar>
       </div>
-
     </div>
     <router-view/>
   </div>

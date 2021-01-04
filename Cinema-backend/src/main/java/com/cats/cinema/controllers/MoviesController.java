@@ -23,19 +23,19 @@ public class MoviesController {
     @GetMapping("/all")
     public List<Movies> getMovies()
     {
-
         return  moviesRepository.findAll();
     }
     @PostMapping("/save")
     public ResponseEntity<?> saveOrUpdate(@RequestParam(required = false) Long id,
                                           @RequestParam(required = false) String title,
-                                          @RequestParam(required = false) Date date){
+                                          @RequestParam(required = false) Date date,
+                                          @RequestParam(required = false) String description){
         boolean isNew = id == null;
 
-        Movies movie = new Movies(id,title,date);
+        Movies movie = new Movies(id,title,date,description);
         movie = moviesRepository.save(movie);
         Map<String, Object> response = new HashMap<>();
-        response.put("Id", movie.getMovie_id());
+        response.put("Id", movie.getmovie_Id());
         if(isNew) {
             response.put("message", "Успешно записан филм!");
         }else{
@@ -47,12 +47,14 @@ public class MoviesController {
     public ResponseEntity<?> getMovieById(@RequestParam(required = false) Long id){
         Movies movie = null;
         try{
-            movie= moviesRepository.findByID(id).get();
+            movie= moviesRepository.findById(id).get();
         }catch (Exception i){
+            i.printStackTrace();
             return new ResponseEntity<>(i.getClass().getName(), HttpStatus.OK);
         }
         return new ResponseEntity<>(movie, HttpStatus.OK);
     }
+    
     @GetMapping("/search/page")
     public ResponseEntity<?>paginateMovies(@RequestParam(value = "currentPage",defaultValue = "1")int currentPage,
                                            @RequestParam(value = "perPage",defaultValue = "5")int perPage,

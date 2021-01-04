@@ -20,12 +20,12 @@ class MoviesService {
     )
   }
 
-  getMovieById (id) {
+  getMovieById (idMovie) {
     return axios.get(API_URL + '/search/id',
       {
         params:
         {
-          id: id
+          id: idMovie
         }
       }
     )

@@ -11,14 +11,10 @@ export default {
   data () {
     return {
       Movie: {
-        id: '',
-        title: '',
-        data: '',
-        description: ''
       }
     }
   },
-  beforeRouterEnter (to, from, next) {
+  beforeRouteEnter (to, from, next) {
     MoviesService.getMovieById(to.params.id).then(
       response => {
         next(vm =>
@@ -26,7 +22,6 @@ export default {
         )
       }
     )
-    console.log(to.params.id)
   },
   methods: {
     setData (response) {

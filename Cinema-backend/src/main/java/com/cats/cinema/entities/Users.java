@@ -49,8 +49,8 @@ public class Users {
         this.name = name;
     }
 
-    public void setRole(String role) {
-        this.role_id = role_id;
+    public void setRole(Roles role) {
+        this.role_id = role;
     }
 
     public Long getUser_id() {

@@ -6,9 +6,6 @@ import com.cats.cinema.entities.Roles;
 import com.cats.cinema.repositories.UsersRepository;
 import com.cats.cinema.repositories.MoviesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -69,7 +66,6 @@ public class CinemaContoller {
             return ResponseEntity.ok("Успешно изтрит потребител! ");
         }
 
-<<<<<<< HEAD
     @Autowired
     MoviesRepository moviesRepository;
 
@@ -88,7 +84,7 @@ public class CinemaContoller {
         Movies movie = new Movies(id,title,date,description);
         movie = moviesRepository.save(movie);
         Map<String, Object> response = new HashMap<>();
-        response.put("Id", movie.getMovie_id());
+        response.put("Id", movie.getmovie_Id());
         if(isNew) {
             response.put("message", "Успешно записан филм!");
         }else{
@@ -96,23 +92,4 @@ public class CinemaContoller {
         }
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
-    @GetMapping("/movies/search/id")
-    public ResponseEntity<?> getMovieById(@RequestParam(required = true) Long id){
-        Movies movie = null;
-        try{
-            movie= moviesRepository.findById(id).get();
-        }catch (Exception i){
-            return new ResponseEntity<>(i.getClass().getName(), HttpStatus.OK);
-        }
-        return new ResponseEntity<>(movie, HttpStatus.OK);
-    }
-    @GetMapping("/movies/search/page")
-    public ResponseEntity<?>paginateMovies(@RequestParam(value = "currentPage",defaultValue = "1")int currentPage,
-                                          @RequestParam(value = "perPage",defaultValue = "5")int perPage,
-                                          @RequestParam String title){
-        Pageable pageable = PageRequest.of(currentPage -1, perPage);
-        Page<Movies> movies = moviesRepository.findPageMovies(pageable, title.toLowerCase());
-=======
->>>>>>> 105b182fa9649918601d5ad1d10c3dab9e282fae
-
 }

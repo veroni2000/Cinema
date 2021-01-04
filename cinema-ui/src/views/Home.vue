@@ -1,9 +1,6 @@
+
 <template>
   <div class="home">
-  </div>
-</template>
-<template>
-  <div>
     <b-carousel
       id="carousel-1"
       v-model="slide"

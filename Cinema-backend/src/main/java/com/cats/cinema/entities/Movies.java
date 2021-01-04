@@ -8,7 +8,7 @@ import java.sql.Date;
 public class Movies {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long movie_id;
+    private Long movie_Id;
 
     @Column(name = "title")
     private String title;
@@ -23,17 +23,18 @@ public class Movies {
     }
 
     public Movies(Long id, String title, Date date, String description) {
+        this.movie_Id = id;
         this.title = title;
         this.date = date;
         this.description = description;
     }
 
-    public Long getMovie_id() {
-        return movie_id;
+    public Long getmovie_Id() {
+        return movie_Id;
     }
 
-    public void setMovie_id(Long movie_id) {
-        this.movie_id = movie_id;
+    public void setId(Long id) {
+        this.movie_Id = id;
     }
 
     public String getTitle() {
