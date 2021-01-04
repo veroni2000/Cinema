@@ -23,12 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd1a14a3-41ae-4bab-8438-b13337fcaa05" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_12_2020___12_56__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_12_2020___12_56__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/controllers/CinemaContoller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/controllers/CinemaContoller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-ui/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-ui/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-ui/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-ui/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-ui/src/services/movies-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-ui/src/services/movies-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-ui/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-ui/src/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-ui/src/views/Movies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-ui/src/views/Movies.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +69,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
