@@ -7,7 +7,6 @@
             <router-link class="mr-sm-2" to="/">Home</router-link>
             <router-link class="mr-sm-2" to="/about">About</router-link>
             <router-link class="mr-sm-2" to="/movies">Movies</router-link>
-            <button v-on:click = "searchMovies">Търси</button>
           </b-navbar-nav>
         </b-navbar>
       </div>
