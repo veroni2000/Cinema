@@ -10,25 +10,16 @@
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
         <b-nav-form>
-          <b-form-input size="sm" class="mr-sm-2" placeholder="Search"></b-form-input>
-          <button v-on:click = "searchMovies">Търси</button>
-        </b-nav-form>
-
-        <b-nav-item-dropdown right>
-          <!-- Using 'button-content' slot -->
-          <template #button-content>
-            <em>User</em>
-          </template>
-          <b-dropdown-item href="#">Profile</b-dropdown-item>
-          <b-dropdown-item href="#">Sign Out</b-dropdown-item>
-        </b-nav-item-dropdown>
-      </b-navbar-nav>
-    </b-collapse>
-  </b-navbar>
+        <b-form-input size="sm" class="mr-sm-2" placeholder="Search"></b-form-input>
+           </b-nav-form>
+          </b-navbar-nav>
+        </b-collapse>
+      </b-navbar>
       <b-table
         id = "moviesTable"
         striped
         hover
+        v-on:click = "searchMovies"
         :items="movies"
         :fields="fields"
         :current-page=1

@@ -5,7 +5,7 @@ import store from './store'
 import * as axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import { BTable, BPagination, NavbarPlugin, BCarousel, BCarouselSlide } from 'bootstrap-vue'
+import { BTable, BPagination, NavbarPlugin, BCarousel, BCarouselSlide, BNavbar } from 'bootstrap-vue'
 
 Vue.component('b-pagination', BPagination)
 Vue.component('b-table', BTable)
@@ -14,6 +14,7 @@ Vue.component('b-carousel-slide', BCarouselSlide)
 Vue.component('b-carousel', BCarousel)
 Vue.prototype.$axios = axios
 Vue.config.productionTip = false
+Vue.component('b-navbar', BNavbar)
 
 new Vue({
   router,
