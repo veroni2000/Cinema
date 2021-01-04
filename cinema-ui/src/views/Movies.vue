@@ -1,5 +1,4 @@
-  
-<template>
+  <template>
   <div>
       <b-table
         id = "moviesTable"
