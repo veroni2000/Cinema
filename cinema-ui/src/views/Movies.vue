@@ -19,7 +19,6 @@
         id = "moviesTable"
         striped
         hover
-        v-on:click = "searchMovies"
         :items="movies"
         :fields="fields"
         :current-page=1
