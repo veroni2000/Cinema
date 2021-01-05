@@ -1,4 +1,4 @@
-<template>
+  <template>
   <div>
       <b-table
         id = "moviesTable"
@@ -82,5 +82,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
