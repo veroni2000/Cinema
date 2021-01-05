@@ -1,6 +1,7 @@
 package com.cats.cinema.entities;
 
 import javax.persistence.*;
+import java.sql.Date;
 import java.sql.Timestamp;
 
 @Entity
@@ -25,6 +26,13 @@ public class Screenings {
     }
 
     public Screenings(int seats, Timestamp time) {
+        this.seats = seats;
+        this.time = time;
+    }
+    
+    public Screenings(Long id, Movies movie, int seats, Timestamp time) {
+        this.screening_id = id;
+        this.movie = movie;
         this.seats = seats;
         this.time = time;
     }
