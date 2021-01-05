@@ -6,7 +6,6 @@ import * as axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { BTable, BPagination, NavbarPlugin, BCarousel, BCarouselSlide, FormInputPlugin, BButton } from 'bootstrap-vue'
-
 Vue.component('b-pagination', BPagination)
 Vue.component('b-table', BTable)
 Vue.component('b-button', BButton)
