@@ -1,8 +1,7 @@
 package com.cats.cinema.entities;
 
 import javax.persistence.*;
-import java.sql.Date;
-import java.sql.Timestamp;
+import java.time.LocalTime;
 
 @Entity
 @Table(name = "screenings")
@@ -20,17 +19,17 @@ public class Screenings {
     private int seats;
 
     @Column(name = "time")
-    private Timestamp time;
+    private LocalTime time;
 
     public Screenings() {
     }
 
-    public Screenings(int seats, Timestamp time) {
+    public Screenings(int seats, LocalTime time) {
         this.seats = seats;
         this.time = time;
     }
-    
-    public Screenings(Long id, Movies movie, int seats, Timestamp time) {
+
+    public Screenings(Long id, Movies movie, int seats, LocalTime time) {
         this.screening_id = id;
         this.movie = movie;
         this.seats = seats;
@@ -62,11 +61,11 @@ public class Screenings {
         this.seats = seats;
     }
 
-    public Timestamp getTime() {
+    public LocalTime getTime() {
         return time;
     }
 
-    public void setTime(Timestamp time) {
+    public void setTime(LocalTime time) {
         this.time = time;
     }
 }

@@ -5,20 +5,21 @@
 </template>
 
 <script>
-import ScreeningService from '../services/screenings-service'
+import ScreeningsService from '../services/screenings-service'
 export default {
-  name: "ScreeningTab",
+  name: 'ScreeningTab',
   data () {
     return {
       Screening: {
       }
     }
   },
-  beforeRouteEnter (to,from,next) {
-    ScreeningService.getScreeningById(to.params.id).then(
+  beforeRouteEnter (to, from, next) {
+    ScreeningsService.getScreeningById(to.params.id).then(
       response => {
         next(vm =>
-        vm.setData(response))
+          vm.setData(response)
+        )
       }
     )
   },
@@ -29,7 +30,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

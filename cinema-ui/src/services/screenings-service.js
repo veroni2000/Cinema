@@ -7,7 +7,7 @@ class ScreeningsService {
     return axios.get(API_URL + '/all')
   }
 
-  getAllFutureScreenings () {
+  getFutureScreenings () {
     return axios.get(API_URL + '/allFuture')
   }
 
