@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Movies from '../views/Movies.vue'
 import MovieTab from '../views/MovieTab.vue'
+import ScreeningTab from '../views/ScreeningTab'
 
 Vue.use(VueRouter)
 
@@ -29,6 +30,11 @@ const routes = [
     path: '/movieTab',
     name: 'MovieTab',
     component: MovieTab
+  },
+  {
+    path: '/screeningTab',
+    name: 'ScreeningTab',
+    component: ScreeningTab
   }
 ]
 
