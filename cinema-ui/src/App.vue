@@ -4,9 +4,9 @@
       <div>
         <b-navbar type="light" variant="light">
           <ul class="nav navbar-nav navbar-right">
-            <li><router-link class="mr-sm-2" to="/">Home</router-link></li>
-            <li><router-link class="mr-sm-2" to="/about">About</router-link></li>
-            <li><router-link class="mr-sm-2" to="/movies">Movies</router-link></li>
+            <li style="font-size:120%;"><router-link class="mr-sm-2" to="/">Home</router-link></li>
+            <li style="font-size:120%;"><router-link class="mr-sm-2" to="/about">About</router-link></li>
+            <li style="font-size:120%;"><router-link class="mr-sm-2" to="/movies">Movies</router-link></li>
           </ul>
           <b-navbar-nav class="ml-auto">
             <form class="form-inline">
@@ -37,6 +37,6 @@
   color: #2c3e50;
 }
 #nav a.router-link-exact-active {
-  color: #85bb65;
+  color: #9dc0eb;
 }
 </style>
