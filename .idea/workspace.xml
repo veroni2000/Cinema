@@ -23,11 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd1a14a3-41ae-4bab-8438-b13337fcaa05" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_12_2020___12_56__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_12_2020___12_56__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-ui/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-ui/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-ui/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-ui/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-ui/src/views/Movies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-ui/src/views/Movies.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-ui/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-ui/src/views/Home.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,9 +111,8 @@
       <workItem from="1608209090689" duration="1626000" />
       <workItem from="1608532025064" duration="86000" />
       <workItem from="1608747066736" duration="7155000" />
-      <workItem from="1609854101965" duration="14050000" />
-      <workItem from="1609933249319" duration="6822000" />
-      <workItem from="1610008401594" duration="5318000" />
+      <workItem from="1609854101965" duration="8659000" />
+      <workItem from="1610203326031" duration="888000" />
     </task>
     <servers />
   </component>
@@ -133,64 +130,6 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1323" height="273" key="GridCell.Tab.0.bottom" timestamp="1610014440005">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="273" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1610014440005" />
-    <state width="1323" height="273" key="GridCell.Tab.0.center" timestamp="1610014440005">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="273" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1610014440005" />
-    <state width="1323" height="273" key="GridCell.Tab.0.left" timestamp="1610014440005">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="273" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1610014440005" />
-    <state width="1323" height="273" key="GridCell.Tab.0.right" timestamp="1610014440005">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="273" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1610014440005" />
-    <state width="1323" height="273" key="GridCell.Tab.1.bottom" timestamp="1610014440006">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="273" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1610014440006" />
-    <state width="1323" height="273" key="GridCell.Tab.1.center" timestamp="1610014440006">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="273" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1610014440006" />
-    <state width="1323" height="273" key="GridCell.Tab.1.left" timestamp="1610014440006">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="273" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1610014440006" />
-    <state width="1323" height="273" key="GridCell.Tab.1.right" timestamp="1610014440006">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="273" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1610014440006" />
-    <state width="1323" height="223" key="GridCell.Tab.2.bottom" timestamp="1609880025907">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="223" key="GridCell.Tab.2.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1609880025907" />
-    <state width="1323" height="223" key="GridCell.Tab.2.center" timestamp="1609880025907">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="223" key="GridCell.Tab.2.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1609880025907" />
-    <state width="1323" height="223" key="GridCell.Tab.2.left" timestamp="1609880025906">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="223" key="GridCell.Tab.2.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1609880025906" />
-    <state width="1323" height="223" key="GridCell.Tab.2.right" timestamp="1609880025907">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="223" key="GridCell.Tab.2.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1609880025907" />
-    <state x="1366" y="0" width="1046" height="715" maximized="true" key="dock-window-1" timestamp="1610008920204">
-      <screen x="1366" y="0" width="1366" height="728" />
-    </state>
-    <state x="1366" y="0" width="1046" height="715" maximized="true" key="dock-window-1/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1610008920204" />
-    <state x="1585" y="0" width="1046" height="715" maximized="true" key="dock-window-2" timestamp="1610013376876">
-      <screen x="1366" y="0" width="1366" height="728" />
-    </state>
-    <state x="1585" y="0" width="1046" height="715" maximized="true" key="dock-window-2/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1610013376876" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/cinema$CinemaApplication.ic" NAME="CinemaApplication Coverage Results" MODIFIED="1604312291314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
