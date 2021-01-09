@@ -23,11 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd1a14a3-41ae-4bab-8438-b13337fcaa05" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_12_2020___12_56__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_12_2020___12_56__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-ui/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-ui/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-ui/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-ui/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema-ui/src/views/Movies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-ui/src/views/Movies.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
