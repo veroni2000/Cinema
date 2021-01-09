@@ -7,16 +7,17 @@
       :items="screenings"
       :fields="fields"
     >
-
-      <template v-slot:cell(movie.title)="data">
-        <router-link :to="{name: 'MovieTab', params:{ id: data.item.movie.movie_Id }}">
-          {{data.item.movie.title}}
-        </router-link>
-      </template>
-      <template v-slot:cell(time)="data">
-        <router-link :to="{name: 'ScreeningTab', params:{ id: data.item.screening_id }}">
-          {{data.item.time}}
-        </router-link>
+      <template v-for="field in fields" v-slot:[`cell(${field.key})`]="data">
+        <div v-if="data.item.movie.title" v-bind:key="field">
+          <router-link :to="{name: 'MovieTab', params:{ id: data.item.movie.movie_Id }}">
+            {{data.item.movie.title}}
+          </router-link>
+        </div>
+        <div v-if="data.item.time" v-bind:key="field">
+          <router-link :to="{name: 'ScreeningTab', params:{ id: data.item.screening_id }}">
+            {{data.item.time | moment("H:mm")}}
+          </router-link>
+        </div>
       </template>
     </b-table>
   </div>
@@ -38,8 +39,11 @@ export default {
         time: ''
       }],
       fields: [
-        { key: 'movie.title', label: 'Филм' },
-        { key: 'time', label: 'Час' }
+        { key: 'monday', label: 'Понеделник' },
+        { key: 'tuesday', label: 'Вторник' },
+        { key: 'wednesday', label: 'Сряда' },
+        { key: 'thursday', label: 'Четвъртък' },
+        { key: 'friday', label: 'Петък' }
       ]
     }
   },
@@ -53,7 +57,6 @@ export default {
           this.screenings = response.data
         })
     }
-
   }
 }
 </script>

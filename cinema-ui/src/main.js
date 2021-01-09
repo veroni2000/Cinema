@@ -15,6 +15,7 @@ Vue.component('b-carousel-slide', BCarouselSlide)
 Vue.component('b-carousel', BCarousel)
 Vue.prototype.$axios = axios
 Vue.config.productionTip = false
+Vue.use(require('vue-moment'))
 
 new Vue({
   router,
