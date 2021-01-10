@@ -5,7 +5,7 @@
         <b-navbar type="light" variant="light">
           <ul class="nav navbar-nav navbar-right">
             <li style="font-size:120%;"><router-link class="mr-sm-2" to="/">Home</router-link></li>
-            <li style="font-size:120%;"><router-link class="mr-sm-2" to="/about">About</router-link></li>
+            <li style="font-size:120%;"><router-link class="mr-sm-2" to="/screenings">Screenings</router-link></li>
             <li style="font-size:120%;"><router-link class="mr-sm-2" to="/movies">Movies</router-link></li>
           </ul>
         </b-navbar>
