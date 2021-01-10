@@ -1,6 +1,7 @@
 <template>
   <div>
     {{Movie}}
+    <img src="/public/pictures/baloni.jpg">
   </div>
 </template>
 

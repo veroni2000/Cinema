@@ -24,9 +24,22 @@
   <component name="ChangeListManager">
     <list default="true" id="fd1a14a3-41ae-4bab-8438-b13337fcaa05" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/cinema-ui/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-ui/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-ui/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-ui/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema-ui/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-ui/src/views/Home.vue" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/CinemaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/CinemaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/controllers/ScreeningsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/controllers/ScreeningsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/entities/Movies.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/entities/Movies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/repositories/MoviesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/repositories/MoviesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/repositories/ScreeningsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cinema-backend/src/main/java/com/cats/cinema/repositories/ScreeningsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-ui/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-ui/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-ui/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-ui/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-ui/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-ui/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-ui/src/views/MovieTab.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-ui/src/views/MovieTab.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema-ui/src/views/Movies.vue" beforeDir="false" afterPath="$PROJECT_DIR$/cinema-ui/src/views/Movies.vue" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +60,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1kVNwQUPfiZhaDNIAIUTxfb3jPh" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -63,7 +79,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cinema-ui/pictures" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -75,6 +91,13 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.cats.cinema" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\chavd\OneDrive\Documents\GitHub\Cinema\cinema-ui\pictures" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\chavd\OneDrive\Documents\GitHub\Cinema\cinema-ui\public" />
+      <recent name="C:\Users\chavd\OneDrive\Documents\GitHub\Cinema\cinema-ui\src" />
     </key>
   </component>
   <component name="RunManager">
@@ -117,6 +140,9 @@
       <workItem from="1610008401594" duration="5318000" />
       <workItem from="1610117792940" duration="5326000" />
       <workItem from="1610202756496" duration="2229000" />
+      <workItem from="1610211617302" duration="10018000" />
+      <workItem from="1610223332634" duration="5107000" />
+      <workItem from="1610270995285" duration="8869000" />
     </task>
     <servers />
   </component>

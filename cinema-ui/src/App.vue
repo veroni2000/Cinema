@@ -8,13 +8,6 @@
             <li style="font-size:120%;"><router-link class="mr-sm-2" to="/about">About</router-link></li>
             <li style="font-size:120%;"><router-link class="mr-sm-2" to="/movies">Movies</router-link></li>
           </ul>
-          <b-navbar-nav class="ml-auto">
-            <form class="form-inline">
-              <b-form-input class="form-control mr-sm-2" type="search" placeholder="Search"></b-form-input>
-              <b-button v-on:click = "searchMovies">Търси</b-button>
-            </form>
-            <h1>GEEEEEEyyy</h1>
-          </b-navbar-nav>
         </b-navbar>
       </div>
     </div>

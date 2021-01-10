@@ -19,6 +19,9 @@ public class Movies {
     @Column(name = "description")
     private String description;
 
+    @Column(name = "picture")
+    private String picture;
+
     public Movies() {
     }
 
@@ -59,5 +62,13 @@ public class Movies {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
     }
 }

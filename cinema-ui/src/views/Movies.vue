@@ -1,5 +1,5 @@
-  <template>
-  <div>
+<template>
+  <div id="ivan">
       <b-table
         id = "moviesTable"
         striped
@@ -9,20 +9,32 @@
         :current-page=1
         :per-page="0"
       >
-<!--
         <template slot="top-row" slot-scope="{fields}">
-          <td v-for="field in fields" :key="field.id">
-            <input v-model="filters[field.key]">
-          </td>
-        </template>-->
+            <td v-for="(field, index) in fields" :key="field.id">
+              <div v-if="index === fields.length - 1">
+              </div>
+              <div v-else class="myDiv">
+                <form class="form-inline">
+                  <b-form-input v-model="filters[field.key]" class="form-control mr-sm-2" type="search" placeholder="Search"></b-form-input>
+                  <b-button v-on:click = "searchMovies">Търси</b-button>
+                </form>
+              </div>
+            </td>
+        </template>
         <template v-slot:cell(title)="data">
-          <div v-if="data.item.title">
-            <router-link :to="{name: 'MovieTab', params:{ id: data.item.movie_Id }}">
-            {{data.item.title}}
+          <div v-if="data.item.title" class="movies">
+           <router-link class="rl" :to="{name: 'MovieTab', params:{ id: data.item.movie_Id }}">
+            <p>{{data.item.title}}</p>
+              <img style="border-radius: 7%" :src="'/pictures/' + data.item.picture.toString()" width="100" >
             </router-link>
           </div>
           <div v-else>
             Няма такъв филм
+          </div>
+        </template>
+        <template v-slot:cell(date)="data">
+          <div v-if="data.item.date" class="rl">
+            {{data.item.date | moment('MMM YYYY')}}
           </div>
         </template>
       </b-table>
@@ -48,7 +60,8 @@ export default {
       movies: [{
         id: '',
         title: '',
-        date: ''
+        date: '',
+        picture: ''
       }],
       fields: [
         { key: 'title', label: 'Заглавие' },
@@ -82,4 +95,16 @@ export default {
 </script>
 
 <style scoped>
+.myDiv{
+  margin-left: 38%;
+}
+.movies{
+  font-size: medium;
+  color: black;
+}
+.rl{
+  color: #2c3e50;
+  font-size: large;
+}
+
 </style>
