@@ -1,7 +1,10 @@
 <template>
   <div>
-    {{Movie}}
-    <img src="/public/pictures/baloni.jpg">
+    <h1>{{Movie.title}}</h1>
+    <div class = "container">
+      <p class = "float-right">{{Movie.description}}</p>
+      <img class = "float-left" src="/public/pictures/baloni.jpg">
+    </div>
   </div>
 </template>
 
