@@ -74,10 +74,3 @@ export default {
   }
 }
 </script>
-<!--
-<script>
-export default {
-  name: 'Home'
-}
-</script>
--->

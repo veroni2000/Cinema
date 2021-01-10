@@ -2,8 +2,7 @@
   <div>
     <h1>{{Movie.title}}</h1>
     <div class = "container">
-      <p class = "float-right">{{Movie.description}}</p>
-      <img class = "float-left" src="/public/pictures/baloni.jpg">
+      <p style="font-size:120%;"><img :src="'/pictures/' + Movie.picture.toString()"  width="300" style="float:left">{{Movie.description}}</p>
     </div>
   </div>
 </template>
@@ -34,3 +33,11 @@ export default {
   }
 }
 </script>
+<style scoped>
+  float-right {
+   float : right;
+  }
+  float-left  {
+   float : left;
+  }
+</style>
