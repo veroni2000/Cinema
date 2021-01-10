@@ -22,6 +22,7 @@
 
   <!-- Slides with custom text -->
   <b-carousel-slide img-src="http://www.mydailywallpaper.com/wallcat/space/bg_wall.jpg">
+  <!-- <b-carousel-slide img-src="/pictures/slide1.jpg"> -->
     <h1></h1>
   </b-carousel-slide>
 
