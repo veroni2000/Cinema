@@ -8,22 +8,19 @@
       :fields="fields"
     >
       <template v-for="field in fields" v-slot:[`cell(${field.key})`]="data">
-        <div v-if="data.item.movie.title" v-bind:key="field">
-          <router-link :to="{name: 'MovieTab', params:{ id: data.item.movie.movie_Id }}">
-            {{data.item.movie.title}}
-          </router-link>
-        </div>
-        <div v-if="data.item.time" v-bind:key="field">
-          <router-link :to="{name: 'ScreeningTab', params:{ id: data.item.screening_id }}">
-            {{data.item.time | moment("H:mm")}}
-          </router-link>
-        </div>
+<!--        <div v-if="data.item.movie.title" v-bind:key="field">-->
+          <div  v-bind:key="field" :v-if="(data.item.time | moment('ddd D.MM.YYYY')) === (field.key)">
+              {{data.item.movie.title}}<p></p>
+              {{data.item.time | moment('ddd D.MM.YYYY')}}
+          </div>
+<!--        </div>-->
       </template>
     </b-table>
   </div>
 </template>
 
 <script>
+import moment from 'moment'
 import ScreeningsService from '../services/screenings-service'
 export default {
   name: 'Screenings',
@@ -39,11 +36,13 @@ export default {
         time: ''
       }],
       fields: [
-        { key: 'monday', label: 'Понеделник' },
-        { key: 'tuesday', label: 'Вторник' },
-        { key: 'wednesday', label: 'Сряда' },
-        { key: 'thursday', label: 'Четвъртък' },
-        { key: 'friday', label: 'Петък' }
+        { key: day1, label: day1.toString() },
+        { key: day2, label: day2.toString() },
+        { key: day3, label: day3.toString() },
+        { key: day4, label: day4.toString() },
+        { key: day5, label: day5.toString() },
+        { key: day6, label: day6.toString() },
+        { key: day7, label: day7.toString() }
       ]
     }
   },
@@ -56,9 +55,24 @@ export default {
         .then(response => {
           this.screenings = response.data
         })
+    },
+    isToday (date) {
+      return moment(date).isSame(moment().clone().startOf('day'), 'd')
+    }
+  },
+  formatter: (value, key, item) => {
+    if (item.updated) {
+      return moment(item.updated).format() // format(YOUR DATE FORMAT)
     }
   }
 }
+var day1 = moment().format('ddd D.MM.YYYY')
+var day2 = moment().add(1, 'days').format('ddd D.MM.YYYY')
+var day3 = moment().add(2, 'days').format('ddd D.MM.YYYY')
+var day4 = moment().add(3, 'days').format('ddd D.MM.YYYY')
+var day5 = moment().add(4, 'days').format('ddd D.MM.YYYY')
+var day6 = moment().add(5, 'days').format('ddd D.MM.YYYY')
+var day7 = moment().add(6, 'days').format('ddd D.MM.YYYY')
 </script>
 
 <style scoped>
