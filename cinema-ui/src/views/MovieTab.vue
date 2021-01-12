@@ -2,8 +2,9 @@
   <div>
     <h1>{{Movie.title}}</h1>
     <div class = "container">
-      <p style="font-size:120%;text-align:center;"><img :src="'/pictures/' + Movie.picture.toString()"  width="300" style="float:left">
-      {{Movie.description}}
+      <p style="font-size:120%;text-align:justify;">
+        <img :src="'/pictures/' + Movie.picture.toString()"  width="300" style="float:left">
+        {{Movie.description}}
       </p>
     </div>
   </div>
