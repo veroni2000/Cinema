@@ -5,6 +5,7 @@ import store from './store'
 import * as axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import moment from 'moment'
 import {
   BTable, BPagination, NavbarPlugin, BCarousel, BCarouselSlide,
   FormInputPlugin, BButton, BImg, BContainer, BRow, BCol, ImagePlugin
@@ -25,6 +26,7 @@ Vue.prototype.$axios = axios
 Vue.config.productionTip = false
 Vue.use(require('vue-moment'))
 Vue.use(ImagePlugin)
+Vue.prototype.moment = moment
 
 new Vue({
   router,

@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.Date;
+import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -54,6 +56,18 @@ public class ScreeningsController {
             return new ResponseEntity<>(e.getClass().getName(), HttpStatus.OK);
         }
         return new ResponseEntity<>(screening, HttpStatus.OK);
+    }
+
+    @GetMapping("/search/date")
+    public ResponseEntity<?> getScreeningsByDate(@RequestParam(required = false) Timestamp date1, Timestamp date2) {
+        List<Screenings> screenings = null;
+        try {
+            screenings = screeningsRepository.findAllForADay(date1, date2);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<>(e.getClass().getName(), HttpStatus.OK);
+        }
+        return new ResponseEntity<>(screenings, HttpStatus.OK);
     }
 
 }
