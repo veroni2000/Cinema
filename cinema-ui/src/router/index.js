@@ -5,7 +5,7 @@ import Movies from '../views/Movies.vue'
 import MovieTab from '../views/MovieTab.vue'
 import ScreeningTab from '../views/ScreeningTab'
 import Screenings from '../views/Screenings'
-
+import Contacts from '../views/Contacts'
 Vue.use(VueRouter)
 
 const routes = [
@@ -18,6 +18,11 @@ const routes = [
     path: '/movies',
     name: 'Movies',
     component: Movies
+  },
+  {
+    path: '/contacts',
+    name: 'Contacts',
+    component: Contacts
   },
   {
     path: '/screenings',

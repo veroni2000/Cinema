@@ -7,6 +7,7 @@
             <li style="font-size:120%;"><router-link class="mr-sm-2" to="/">Home</router-link></li>
             <li style="font-size:120%;"><router-link class="mr-sm-2" to="/screenings">Screenings</router-link></li>
             <li style="font-size:120%;"><router-link class="mr-sm-2" to="/movies">Movies</router-link></li>
+            <li style="font-size:120%;"><router-link class="mr-sm-2" to="/Contacts">Contacts</router-link></li>
           </ul>
         </b-navbar>
       </div>
