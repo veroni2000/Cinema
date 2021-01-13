@@ -1,7 +1,10 @@
 <template>
 <div>
-  {{Screening}}
+  {{Screening.seats}}
 </div>
+  <div class="mycontainer">
+
+  </div>
 </template>
 
 <script>
@@ -10,8 +13,17 @@ export default {
   name: 'ScreeningTab',
   data () {
     return {
-      Screening: {
-      }
+      Screening: [{
+        screening_id: '',
+        movie: [{
+          movie_Id: '',
+          title: '',
+          date: '',
+          picture: ''
+        }],
+        seats: '',
+        time: ''
+      }]
     }
   },
   beforeRouteEnter (to, from, next) {
@@ -30,3 +42,11 @@ export default {
   }
 }
 </script>
+<style>
+.mycontainer{
+  width: 33%;
+  height: 33%;
+  background-color: #42b983;
+  position: center;
+}
+</style>
