@@ -36,14 +36,12 @@
 </style>
 <template>
   <div>
-    <table class="screeningsTable">
+    <v-table striped hover class="screeningsTable">
       <template>
+        <span v-bind:key="field" v-for="field in fields">
       <tr>
-        <span v-bind:key="field" v-for="field in fields">
         <th v-bind:key="field">{{field.label}}</th>
-        </span>
        </tr>
-        <span v-bind:key="field" v-for="field in fields">
         <td>
           <div v-bind:key="screening" v-for="screening in screenings">
           <tr v-bind:key="screening" v-if="( moment(screening.time).format('ddd D.MM.YYYY') === (field.key))">
@@ -57,7 +55,7 @@
         </td>
         </span>
       </template>
-    </table>
+    </v-table>
 
   </div>
 </template>

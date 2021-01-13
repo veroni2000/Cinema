@@ -1,54 +1,80 @@
 <style>
+body{
+  font-family: Arial;
+}
 .mC{
-  width: 41%;
-  height: 500px;
-  margin-left: 28%;
-  background-color: #42b983;
-  border: 1px solid green;
+  width: 50%;
+  margin-left: 25%;
+  border: 3px solid #2c3e50;
   position: center;
+  color: #2c3e50;
+  overflow: auto;
+  margin-bottom: 5%;
 }
 .sImg{
-  margin-top: -3%;
-  position: fixed;
+  width: 40%;
+  float: right;
+  padding-left: 5%;
 }
 .sTittle{
-  margin-top: 3%;
+  padding: 5%;
   text-align: left;
   font-size: 40px;
-  margin-left: 2%;
-  font-family: Arial;
+  width: 100%;
+  overflow: auto;
 }
-.Ti{
-  margin-top: 25%;
-  font-family: Arial;
+.sTittle .rl{
+  color: #2c3e50;
+  text-decoration: none;
+}
+.sTittle .rl:hover{
+  text-decoration: underline;
+}
+.sTittle p{
+  font-size: 20px;
+}
+.myForm{
+  padding-bottom: 20px;
+}
+.myButton{
+  background-color: #2c3e50;
+  height: 50px;
 }
 </style>
 <template>
 <div>
   <div class="mC">
     <div class="sTittle">
+      <img class="sImg" :src="'/pictures/' + Screening.movie.picture.toString()">
+      <router-link class="rl" :to="{name: 'MovieTab', params:{ id: Screening.movie.movie_Id }}">
       {{Screening.movie.title}}
+      </router-link>
+      <p>
+        Резервация на билет за филма {{Screening.movie.title}}, чиято прожекция ще бъде излъчена на {{Screening.time | moment('D.MM.YYYY')}} в {{Screening.time | moment('H:mm')}}ч.
+      </p>
     </div>
-    <img class="sImg" :src="'/pictures/' + Screening.movie.picture.toString()" width="200" >
-    <p class="Ti">
-      Закопуване на билет за фила {{Screening.movie.title}}, чиято прожекция ще бъде излъчена на {{Screening.time | moment('D.MM.YYYY')}} в {{Screening.time | moment('H:mm')}}
-    </p>
-    <b-form>
-      <b-row>
-      <b-col sm="9" style="margin-left: 13%">
+    <b-form class="myForm">
+      <b-col style="margin-left: 10%; width: 80%">
       <b-form-input
         placeholder="Email"
-        size="lg"
+        type="email"
+        required
       >
       </b-form-input>
-      </b-col><br>
-        <b-col sm="2" style="margin-left: 20%">
-          Брой билети
+      </b-col>
+      <b-row style="margin: 3% 10% 10%">
+        <b-col style="width: 1%;">
+          Брой билети:
           <b-form-input
-            size="lg"
+            type="number"
+            min="0"
+            :max="Screening.seats"
           >
           </b-form-input>
         </b-col>
+      <b-col style="width: 30%; margin-top: 2%; margin-left: 50%">
+        <b-button class="myButton" type="submit">Резервирай</b-button>
+      </b-col>
       </b-row>
     </b-form>
 
@@ -72,7 +98,20 @@ export default {
         }],
         seats: '',
         time: ''
-      }]
+      }],
+      types: [
+        'text',
+        'number',
+        'email',
+        'password',
+        'search',
+        'url',
+        'tel',
+        'date',
+        'time',
+        'range',
+        'color'
+      ]
     }
   },
   beforeRouteEnter (to, from, next) {
