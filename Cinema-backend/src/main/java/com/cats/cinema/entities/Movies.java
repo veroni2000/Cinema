@@ -22,6 +22,15 @@ public class Movies {
     @Column(name = "picture")
     private String picture;
 
+    @Column(name = "director")
+    private String director;
+
+    @Column(name = "actors")
+    private String actors;
+
+    @Column(name = "country")
+    private String country;
+
     public Movies() {
     }
 
@@ -70,5 +79,29 @@ public class Movies {
 
     public void setPicture(String picture) {
         this.picture = picture;
+    }
+    
+    public String getDirector() {
+        return director;
+    }
+
+    public void setDirector(String director) {
+        this.director = director;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getActors() {
+        return actors;
+    }
+
+    public void setActors(String actors) {
+        this.actors = actors;
     }
 }

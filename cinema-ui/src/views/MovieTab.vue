@@ -1,10 +1,17 @@
 <template>
   <div>
     <h1>{{Movie.title}}</h1>
-    <div class = "container">
-      <p style="font-size:120%;text-align:justify;">
-        <img :src="'/pictures/' + Movie.picture.toString()"  width="300" style="float:left">
-        {{Movie.description}}
+    <br>
+    <div class="container">
+      <p style = "font-size:120%;">
+        <img :src="'/pictures/' + Movie.picture.toString()"  width="300" style="float:left; padding-right: 40px;">
+        <ul style="list-style-type:none; text-align:left;">
+          <li>Режисьор: {{Movie.director}}</li>
+          <li>Актьори: {{Movie.actors}}</li>
+          <li>Дата: {{Movie.date}}</li>
+          <li>Държава: {{Movie.country}}</li>
+          <li>Описание: {{Movie.description}}</li>
+        </ul>
       </p>
     </div>
   </div>
@@ -37,10 +44,8 @@ export default {
 }
 </script>
 <style scoped>
-  float-right {
-   float : right;
-  }
-  float-left  {
-   float : left;
-  }
+float{
+  float: left;
+  float: right;
+}
 </style>
