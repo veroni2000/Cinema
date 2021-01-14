@@ -4,8 +4,8 @@
     <br>
     <div class="container">
       <p style = "font-size:120%;">
-        <img :src="'/pictures/' + Movie.picture.toString()"  width="300" style="float:left; padding-right: 40px;">
-        <ul style="list-style-type:none; text-align:left;">
+        <img class = "mImg" :src="'/pictures/' + Movie.picture.toString()">
+        <ul class = "mDesc">
           <li>Режисьор: {{Movie.director}}</li>
           <li>Актьори: {{Movie.actors}}</li>
           <li>Дата: {{Movie.date}}</li>
@@ -47,5 +47,14 @@ export default {
 float{
   float: left;
   float: right;
+}
+.mDesc{
+  list-style-type:none;
+  text-align:left;
+}
+.mImg{
+  width: 300px;
+  float:left;
+  padding-right: 40px;
 }
 </style>
