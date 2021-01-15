@@ -55,7 +55,7 @@ public class UsersController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-    @PostMapping("/save")
+   /* @PostMapping("/save")
     public ResponseEntity<?> saveOrUpdate(@RequestParam(required = false) Long id,
                                           @RequestParam(required = false) String name,
                                           @RequestParam(required = false) String email,
@@ -73,7 +73,7 @@ public class UsersController {
             response.put("message", "Успешно редактиран потребител!");
         }
         return new ResponseEntity<>(response, HttpStatus.OK);
-    }
+    }*/
 
     @DeleteMapping("/delete")
     public ResponseEntity<?> deleteUser(@RequestParam Long id) {

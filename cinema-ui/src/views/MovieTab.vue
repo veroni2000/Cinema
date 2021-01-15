@@ -8,7 +8,7 @@
         <ul class = "mDesc">
           <li>Режисьор: {{Movie.director}}</li>
           <li>Актьори: {{Movie.actors}}</li>
-          <li>Дата: {{Movie.date}}</li>
+          <li>Дата: {{Movie.date | moment('DD MMM YYYY')}}</li>
           <li>Държава: {{Movie.country}}</li>
           <li>Описание: {{Movie.description}}</li>
         </ul>

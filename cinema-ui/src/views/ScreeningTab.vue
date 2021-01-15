@@ -73,7 +73,7 @@ body{
           </b-form-input>
         </b-col>
       <b-col style="width: 30%; margin-top: 2%; margin-left: 50%">
-        <b-button class="myButton" type="submit">Резервирай</b-button>
+        <b-button class="myButton" type="submit" v-on:click="submit">Резервирай</b-button>
       </b-col>
       </b-row>
     </b-form>
@@ -84,6 +84,7 @@ body{
 
 <script>
 import ScreeningsService from '../services/screenings-service'
+import TicketsService from '../services/tickets-service'
 export default {
   name: 'ScreeningTab',
   data () {
@@ -126,6 +127,12 @@ export default {
   methods: {
     setData (response) {
       this.Screening = response.data
+    },
+    CreateTicket () {
+      TicketsService.createTicket(this.Screening.screening_id, 'this.email')
+    },
+    submit: function () {
+      TicketsService.createTicket(this.Screening.screening_id, 'this.email')
     }
   }
 }
