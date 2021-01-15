@@ -21,28 +21,28 @@ import java.util.Map;
 public class UsersController {
     @Autowired
     UsersRepository usersRepository;
+
     @GetMapping("/all")
-    public List<Users> getUsers()
-    {
-        return  usersRepository.findAll();
+    public List<Users> getUsers() {
+        return usersRepository.findAll();
     }
 
     @GetMapping("/search/id")
-    public ResponseEntity<?> getUserById(@RequestParam(required = false) Long id){
+    public ResponseEntity<?> getUserById(@RequestParam(required = false) Long id) {
         Users user = null;
-        try{
-            user= usersRepository.findById(id).get();
-        }catch (Exception i){
+        try {
+            user = usersRepository.findById(id).get();
+        } catch (Exception i) {
             return new ResponseEntity<>(i.getClass().getName(), HttpStatus.OK);
         }
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
 
     @GetMapping("/search/page")
-    public ResponseEntity<?>paginateUsers(@RequestParam(value = "currentPage",defaultValue = "1")int currentPage,
-                                          @RequestParam(value = "perPage",defaultValue = "5")int perPage,
-                                          @RequestParam String name){
-        Pageable pageable = PageRequest.of(currentPage -1, perPage);
+    public ResponseEntity<?> paginateUsers(@RequestParam(value = "currentPage", defaultValue = "1") int currentPage,
+                                           @RequestParam(value = "perPage", defaultValue = "5") int perPage,
+                                           @RequestParam String name) {
+        Pageable pageable = PageRequest.of(currentPage - 1, perPage);
         Page<Users> users = usersRepository.findPageUsers(pageable, name.toLowerCase());
 
         Map<String, Object> response = new HashMap<>();
@@ -52,7 +52,7 @@ public class UsersController {
         response.put("totalItems", users.getTotalElements());
         response.put("totalPages", users.getTotalPages());
 
-        return new ResponseEntity<>(response,HttpStatus.OK);
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @PostMapping("/save")
@@ -60,23 +60,23 @@ public class UsersController {
                                           @RequestParam(required = false) String name,
                                           @RequestParam(required = false) String email,
                                           @RequestParam(required = false) String password,
-                                          @RequestParam(required = false) Roles role_id){
+                                          @RequestParam(required = false) Roles role_id) {
         boolean isNew = id == null;
 
-        Users user = new Users(id,email,password,name,role_id);
+        Users user = new Users(id, email, password, name, role_id);
         user = usersRepository.save(user);
         Map<String, Object> response = new HashMap<>();
         response.put("Id", user.getUser_id());
-        if(isNew) {
+        if (isNew) {
             response.put("message", "Успешно записан потребител!");
-        }else{
+        } else {
             response.put("message", "Успешно редактиран потребител!");
         }
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @DeleteMapping("/delete")
-    public ResponseEntity<?> deleteUser(@RequestParam Long id){
+    public ResponseEntity<?> deleteUser(@RequestParam Long id) {
         usersRepository.deleteById(id);
         return ResponseEntity.ok("Успешно изтрит потребител! ");
     }

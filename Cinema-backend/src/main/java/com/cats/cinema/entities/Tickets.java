@@ -10,10 +10,6 @@ public class Tickets {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ticket_id;
 
-    @ManyToOne()
-    @JoinColumn(name = "user_id")
-    private Users user;
-
     @OneToOne()
     @JoinColumn(name = "screening_id")
     private Screenings screening;
@@ -21,9 +17,16 @@ public class Tickets {
     @Column(name = "code")
     private String code;
 
+    @Column(name= "email")
+    private String email;
+
     public Tickets() {
     }
-
+    public Tickets(Screenings screening,String code, String email) {
+        this.screening = screening;
+        this.code = code;
+        this.email = email;
+    }
     public Tickets(String code) {
         this.code = code;
     }
@@ -34,14 +37,6 @@ public class Tickets {
 
     public void setTicket_id(Long ticket_id) {
         this.ticket_id = ticket_id;
-    }
-
-    public Users getUser() {
-        return user;
-    }
-
-    public void setUser(Users user) {
-        this.user = user;
     }
 
     public Screenings getScreening() {
@@ -59,4 +54,13 @@ public class Tickets {
     public void setCode(String code) {
         this.code = code;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
 }
