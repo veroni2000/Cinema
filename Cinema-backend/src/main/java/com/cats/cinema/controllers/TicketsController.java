@@ -1,11 +1,10 @@
 package com.cats.cinema.controllers;
 
-import com.cats.cinema.entities.Roles;
 import com.cats.cinema.entities.Screenings;
+import com.cats.cinema.entities.TicketDto;
 import com.cats.cinema.entities.Tickets;
-
-import com.cats.cinema.repositories.TicketsRepository;
 import com.cats.cinema.repositories.ScreeningsRepository;
+import com.cats.cinema.repositories.TicketsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,28 +22,28 @@ public class TicketsController {
     TicketsRepository ticketsRepository;
     @Autowired
     ScreeningsRepository screeningsRepository;
+
     public static String generateString() {
-        String uuid = UUID.randomUUID().toString();
-        return uuid;
+        return UUID.randomUUID().toString();
     }
 
     @PostMapping("/save")
-    public ResponseEntity<?> saveTicket(@RequestParam Long screening_id,
-                                          @RequestParam String email){
-        Screenings screening = new Screenings();
+    public ResponseEntity<?> saveTicket(@RequestBody TicketDto dto) {
+        System.out.println(dto.getScreening_id() +" " + dto.getEmail());
         try {
-            screening = screeningsRepository.findById(screening_id).get();
+            Screenings screening = screeningsRepository.findById(dto.getScreening_id()).get();
+            var code = generateString();
+            Tickets ticket = new Tickets(screening, code, dto.getEmail());
+            ticket = ticketsRepository.save(ticket);
+            Map<String, Object> response = new HashMap<>();
+            response.put("generatedId", ticket.getTicket_id());
+            response.put("message", "Успешно записан билет");
+
+            return new ResponseEntity<>(response, HttpStatus.OK);
         } catch (Exception e) {
+
             e.printStackTrace();
             return new ResponseEntity<>(e.getClass().getName(), HttpStatus.OK);
         }
-         var code = generateString();
-        Tickets ticket = new Tickets(screening,code,email);
-        ticket = ticketsRepository.save(ticket);
-        Map<String, Object> response = new HashMap<>();
-        response.put("generatedId", ticket.getTicket_id());
-        response.put("message", "Усепешно записан билет");
-
-        return new ResponseEntity<>(response,HttpStatus.OK);
     }
 }

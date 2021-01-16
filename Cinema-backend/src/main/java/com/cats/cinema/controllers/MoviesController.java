@@ -14,52 +14,55 @@ import java.sql.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("movies")
 public class MoviesController {
     @Autowired
     MoviesRepository moviesRepository;
+
     @GetMapping("/all")
-    public List<Movies> getMovies()
-    {
-        return  moviesRepository.findAll();
+    public List<Movies> getMovies() {
+        return moviesRepository.findAll();
     }
+
     @PostMapping("/save")
     public ResponseEntity<?> saveOrUpdate(@RequestParam(required = false) Long id,
                                           @RequestParam(required = false) String title,
                                           @RequestParam(required = false) Date date,
-                                          @RequestParam(required = false) String description){
+                                          @RequestParam(required = false) String description) {
         boolean isNew = id == null;
 
-        Movies movie = new Movies(id,title,date,description);
+        Movies movie = new Movies(id, title, date, description);
         movie = moviesRepository.save(movie);
         Map<String, Object> response = new HashMap<>();
         response.put("Id", movie.getmovie_Id());
-        if(isNew) {
+        if (isNew) {
             response.put("message", "Успешно записан филм!");
-        }else{
+        } else {
             response.put("message", "Успешно редактиран филм!");
         }
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
+
     @GetMapping("/search/id")
-    public ResponseEntity<?> getMovieById(@RequestParam(required = false) Long id){
+    public ResponseEntity<?> getMovieById(@RequestParam(required = false) Long id) {
         Movies movie = null;
-        try{
-            movie= moviesRepository.findById(id).get();
-        }catch (Exception i){
+        try {
+            movie = moviesRepository.findById(id).get();
+        } catch (Exception i) {
             i.printStackTrace();
             return new ResponseEntity<>(i.getClass().getName(), HttpStatus.OK);
         }
         return new ResponseEntity<>(movie, HttpStatus.OK);
     }
-    
+
     @GetMapping("/search/page")
-    public ResponseEntity<?>paginateMovies(@RequestParam(value = "currentPage",defaultValue = "1")int currentPage,
-                                           @RequestParam(value = "perPage",defaultValue = "5")int perPage,
-                                           @RequestParam String title){
-        Pageable pageable = PageRequest.of(currentPage -1, perPage);
+    public ResponseEntity<?> paginateMovies(@RequestParam(value = "currentPage", defaultValue = "1") int currentPage,
+                                            @RequestParam(value = "perPage", defaultValue = "5") int perPage,
+                                            @RequestParam String title) {
+        Pageable pageable = PageRequest.of(currentPage - 1, perPage);
         Page<Movies> movies = moviesRepository.findPageMovies(pageable, title.toLowerCase());
 
         Map<String, Object> response = new HashMap<>();
@@ -68,6 +71,6 @@ public class MoviesController {
         response.put("totalItems", movies.getTotalElements());
         response.put("totalPages", movies.getTotalPages());
 
-        return new ResponseEntity<>(response,HttpStatus.OK);
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }

@@ -45,7 +45,7 @@ body{
 <div>
   <div class="mC">
     <div class="sTittle">
-      <img class="sImg" :src="'/pictures/' + Screening.movie.picture.toString()">
+      <img class="sImg" :src="'/pictures/' + Screening.movie.picture">
       <router-link class="rl" :to="{name: 'MovieTab', params:{ id: Screening.movie.movie_Id }}">
       {{Screening.movie.title}}
       </router-link>
@@ -58,6 +58,7 @@ body{
       <b-form-input
         placeholder="Email"
         type="email"
+        v-model="email"
         required
       >
       </b-form-input>
@@ -84,13 +85,13 @@ body{
 
 <script>
 import ScreeningsService from '../services/screenings-service'
-import TicketsService from '../services/tickets-service'
+import axios from 'axios'
 export default {
   name: 'ScreeningTab',
   data () {
     return {
       Screening: [{
-        screening_id: '',
+        screening_id: parseInt(''),
         movie: [{
           movie_Id: '',
           title: '',
@@ -128,11 +129,25 @@ export default {
     setData (response) {
       this.Screening = response.data
     },
-    CreateTicket () {
-      TicketsService.createTicket(this.Screening.screening_id, 'this.email')
-    },
+    // CreateTicket () {
+    //   TicketsService.createTicket(this.Screening.screening_id, 'this.email')
+    // },
     submit: function () {
-      TicketsService.createTicket(this.Screening.screening_id, 'this.email')
+      /* console.log('here')
+      TicketsService.saveTicket(this.Screening.screening_id, 'email') */
+      axios.post('http://localhost:8080/tickets/save', {
+        screening_id: this.Screening.screening_id,
+        email: this.email
+      })
+        .then((res) => {
+          // Perform Success Action
+          console.log(this.Screening.screening_id)
+        })
+        .catch((error) => {
+          console.log(error)
+        }).finally(() => {
+        // Perform action in always
+        })
     }
   }
 }

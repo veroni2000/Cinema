@@ -9,8 +9,8 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.Optional;
 
 public interface MoviesRepository extends JpaRepository<Movies, Long> {
-    @Query("SELECT m FROM Movies m WHERE m.movie_Id = :id")
-    Optional<Movies> findByID(Long id);
+//    @Query("SELECT m FROM Movies m WHERE m.movie_Id = :id")
+//    Optional<Movies> findByID(Long id);
 
     @Query("SELECT m FROM Movies m " +
             "WHERE lower(m.title) " +
