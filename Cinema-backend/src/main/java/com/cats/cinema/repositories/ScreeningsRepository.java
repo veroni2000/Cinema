@@ -20,14 +20,7 @@ public interface ScreeningsRepository extends JpaRepository<Screenings, Long> {
     @Query("FROM Screenings s WHERE s.time >= :date1 AND s.time <= :date2")
     List<Screenings> findAllForADay(Timestamp date1, Timestamp date2);
 
-//    @Query("FROM Screenings s WHERE s.time >= :date1  AND s.time <= :date2 ")
-//    List<Screenings> weekly(@Param("date1") LocalDateTime date1 ,
-//                            @Param("date2") LocalDateTime date2);
-}
-//SELECT *
-//FROM screenings s
-//WHERE s.time BETWEEN NOW() AND NOW() + INTERVAL '7'
+    @Query("Update Screenings s SET s.seats = :seats WHERE s.screening_id = :id")
+    Screenings updateSeats(Integer seats, Long id);
 
-//SELECT *
-//FROM screenings s
-//WHERE s.time >= CURRENT_DATE  AND s.time <= CURRENT_DATE + integer '7'
+}

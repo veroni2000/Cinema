@@ -1,5 +1,17 @@
+<style>
+.mC2{
+  width: 70%;
+  margin-left: 15%;
+  border: 3px solid #2c3e50;
+  position: center;
+  color: #2c3e50;
+  overflow: auto;
+  margin-bottom: 5%;
+  padding-bottom: 5%;
+}
+</style>
 <template>
-  <div>
+  <div class="mC2">
     <h1>{{Movie.title}}</h1>
     <br>
     <div class="container">

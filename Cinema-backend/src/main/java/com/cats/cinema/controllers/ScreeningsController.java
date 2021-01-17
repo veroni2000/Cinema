@@ -26,8 +26,7 @@ public class ScreeningsController {
     int hour = now.getHour();
     int minute = now.getMinute();
     int second = now.getSecond();
-    String str1 = String.format("%d-%02d-%02d %02d:%02d:%02d", year, month, day, hour, minute, second);
-    String str2 = String.format("%d-%02d-%02d %02d:%02d:%02d", year, month, day + 7, hour, minute, second);
+
 
     @GetMapping("/all")
     public List<Screenings> getScreenings() {
@@ -39,10 +38,6 @@ public class ScreeningsController {
         return screeningsRepository.findAllFuture();
     }
 
-//    @GetMapping("/weekly")
-//    public List<Screenings> getWeeklyScreenings() {
-//        return screeningsRepository.weekly(LocalDateTime.parse(str1,  DateTimeFormatter.ofPattern ( "yyyy-MM-dd HH:mm:ss" )), LocalDateTime.parse(str2,  DateTimeFormatter.ofPattern ( "yyyy-MM-dd HH:mm:ss" )));
-//    }
 
     @GetMapping("/search/id")
     public ResponseEntity<?> getScreeningById(@RequestParam(required = false) Long id) {
@@ -61,11 +56,21 @@ public class ScreeningsController {
         List<Screenings> screenings = null;
         try {
             screenings = screeningsRepository.findAllForADay(date1, date2);
+            return new ResponseEntity<>(screenings, HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace();
             return new ResponseEntity<>(e.getClass().getName(), HttpStatus.OK);
         }
-        return new ResponseEntity<>(screenings, HttpStatus.OK);
     }
 
+    @PostMapping("/seats")
+    public ResponseEntity<?> updateSeats(@RequestParam(required = false) Integer seats, Long id) {
+        try {
+            screeningsRepository.updateSeats(seats, id);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(e.getClass().getName(), HttpStatus.OK);
+        }
+
+    }
 }

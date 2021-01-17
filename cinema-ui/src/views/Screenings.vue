@@ -13,7 +13,7 @@
   color: white;
 }
 .screeningsTable td{
-  width: 150px;
+  width: 180px;
   height: 150px;
   text-align: center;
   padding: 10px;
@@ -27,6 +27,7 @@
   display: inline-block;
   margin-bottom: 10px;
   padding-top: 8px;
+  width: 160px;
 }
 .screeningsTable .rl:hover{
   background-color: #2c3e50;

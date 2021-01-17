@@ -20,12 +20,16 @@ public class Tickets {
     @Column(name= "email")
     private String email;
 
+    @Column(name = "price")
+    private Double price;
+
     public Tickets() {
     }
-    public Tickets(Screenings screening,String code, String email) {
+    public Tickets(Screenings screening,String code, String email, Double price) {
         this.screening = screening;
         this.code = code;
         this.email = email;
+        this.price = price;
     }
     public Tickets(String code) {
         this.code = code;

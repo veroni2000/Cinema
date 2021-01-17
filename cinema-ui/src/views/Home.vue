@@ -13,24 +13,17 @@
   @sliding-start="onSlideStart"
   @sliding-end="onSlideEnd"
 >
-  <!-- Text slides with image -->
   <b-carousel-slide
     caption="Кино Мегами"
     text=""
     img-src="https://images.unsplash.com/photo-1573727951373-ac2b41ed1400?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2500&q=80"
   ></b-carousel-slide>
 
-  <!-- Slides with custom text -->
   <b-carousel-slide img-src="http://www.mydailywallpaper.com/wallcat/space/bg_wall.jpg">
-  <!-- <b-carousel-slide img-src="/pictures/slide1.jpg"> -->
     <h1></h1>
   </b-carousel-slide>
 
-  <!-- Slides with image only -->
   <b-carousel-slide img-src="https://greenwichinlondon.com/wp-content/uploads/2013/03/movies-filmed-in-greenwich-slider.jpg"></b-carousel-slide>
-
-  <!-- Slides with img slot -->
-  <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
   <b-carousel-slide>
     <template #img>
       <img

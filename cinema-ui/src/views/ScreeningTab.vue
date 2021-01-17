@@ -52,13 +52,15 @@ body{
       <p>
         Резервация на билет за филма {{Screening.movie.title}}, чиято прожекция ще бъде излъчена на {{Screening.time | moment('D.MM.YYYY')}} в {{Screening.time | moment('H:mm')}}ч.
       </p>
+      <p>Цена: 9.50лв.</p>
     </div>
-    <b-form class="myForm">
+    <b-form class="myForm" @submit.prevent="submit">
       <b-col style="margin-left: 10%; width: 80%">
       <b-form-input
         placeholder="Email"
         type="email"
         v-model="email"
+        name="email"
         required
       >
       </b-form-input>
@@ -67,6 +69,8 @@ body{
         <b-col style="width: 1%;">
           Брой билети:
           <b-form-input
+            name="br"
+            v-model="br"
             type="number"
             min="0"
             :max="Screening.seats"
@@ -129,25 +133,22 @@ export default {
     setData (response) {
       this.Screening = response.data
     },
-    // CreateTicket () {
-    //   TicketsService.createTicket(this.Screening.screening_id, 'this.email')
-    // },
-    submit: function () {
-      /* console.log('here')
-      TicketsService.saveTicket(this.Screening.screening_id, 'email') */
-      axios.post('http://localhost:8080/tickets/save', {
-        screening_id: this.Screening.screening_id,
-        email: this.email
-      })
-        .then((res) => {
-          // Perform Success Action
-          console.log(this.Screening.screening_id)
+    submit: function (event) {
+      if (event) {
+        axios.post('http://localhost:8080/tickets/save', {
+          screening_id: this.Screening.screening_id,
+          email: this.email,
+          seats: this.Screening.seats,
+          ticketNumber: this.br
         })
-        .catch((error) => {
-          console.log(error)
-        }).finally(() => {
-        // Perform action in always
-        })
+          .then((res) => {
+          })
+          .catch((error) => {
+            console.log(error)
+          }).finally(() => {
+          })
+        window.location.href = 'http://localhost:8081/#/screenings'
+      }
     }
   }
 }

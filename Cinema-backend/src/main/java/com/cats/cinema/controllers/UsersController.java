@@ -37,26 +37,6 @@ public class UsersController {
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
 
-//    @PostMapping("/save")
-//    public ResponseEntity<?> saveOrUpdate(@RequestParam(required = false) Long id,
-//                                          @RequestParam(required = false) String name,
-//                                          @RequestParam(required = false) String email,
-//                                          @RequestParam(required = false) String password,
-//                                          @RequestParam(required = false) Roles role_id) {
-//        boolean isNew = id == null;
-//
-//        Users user = new Users(id, email, password, name, role_id);
-//        user = usersRepository.save(user);
-//        Map<String, Object> response = new HashMap<>();
-//        response.put("Id", user.getUser_id());
-//        if (isNew) {
-//            response.put("message", "Успешно записан потребител!");
-//        } else {
-//            response.put("message", "Успешно редактиран потребител!");
-//        }
-//        return new ResponseEntity<>(response, HttpStatus.OK);
-//    }
-
     @GetMapping("/search/page")
     public ResponseEntity<?> paginateUsers(@RequestParam(value = "currentPage", defaultValue = "1") int currentPage,
                                            @RequestParam(value = "perPage", defaultValue = "5") int perPage,

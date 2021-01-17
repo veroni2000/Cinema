@@ -29,16 +29,20 @@ public class TicketsController {
 
     @PostMapping("/save")
     public ResponseEntity<?> saveTicket(@RequestBody TicketDto dto) {
-        System.out.println(dto.getScreening_id() +" " + dto.getEmail());
+        Double price = 9.5;
         try {
-            Screenings screening = screeningsRepository.findById(dto.getScreening_id()).get();
-            var code = generateString();
-            Tickets ticket = new Tickets(screening, code, dto.getEmail());
-            ticket = ticketsRepository.save(ticket);
-            Map<String, Object> response = new HashMap<>();
-            response.put("generatedId", ticket.getTicket_id());
-            response.put("message", "Успешно записан билет");
+            for (int i = 0; i < dto.getTicketNumber(); i++) {
+                Screenings screening = screeningsRepository.findById(dto.getScreening_id()).get();
+                var code = generateString();
+                Tickets ticket = new Tickets(screening, code, dto.getEmail(), price);
+                ticket = ticketsRepository.save(ticket);
 
+                screening.setSeats(screening.getSeats() - 1);
+                screeningsRepository.save(screening);
+            }
+
+            Map<String, Object> response = new HashMap<>();
+            response.put("message", "Успешно записан билет");
             return new ResponseEntity<>(response, HttpStatus.OK);
         } catch (Exception e) {
 
