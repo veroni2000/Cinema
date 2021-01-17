@@ -6,11 +6,11 @@
       <p style = "font-size:120%;">
         <img class = "mImg" :src="'/pictures/' + Movie.picture.toString()">
         <ul class = "mDesc">
-          <li>Режисьор: {{Movie.director}}</li>
-          <li>Актьори: {{Movie.actors}}</li>
-          <li>Дата: {{Movie.date | moment('DD MMM YYYY')}}</li>
-          <li>Държава: {{Movie.country}}</li>
-          <li>Описание: {{Movie.description}}</li>
+          <li><b>Режисьор:</b> {{Movie.director}}</li>
+          <li><b>Актьори:</b> {{Movie.actors}}</li>
+          <li><b>Дата:</b> {{Movie.date | moment('DD MMM YYYY')}}</li>
+          <li><b>Държава:</b> {{Movie.country}}</li>
+          <li><b>Описание:</b> {{Movie.description}}</li>
         </ul>
       </p>
     </div>

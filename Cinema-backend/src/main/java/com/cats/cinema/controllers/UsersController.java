@@ -1,7 +1,6 @@
 package com.cats.cinema.controllers;
 
 import com.cats.cinema.entities.Users;
-import com.cats.cinema.entities.Roles;
 import com.cats.cinema.repositories.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;

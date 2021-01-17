@@ -2,7 +2,6 @@ package com.cats.cinema.entities;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
-import java.time.LocalTime;
 
 @Entity
 @Table(name = "screenings")
